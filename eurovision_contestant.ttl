@@ -4,22 +4,57 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 @prefix foaf: <http://xmlns.com/foaf/0.1/>
 @prefix dct: <http://purl.org/dc/terms/>
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
-dbo:alias 	"Maria Yaremchuk"@en.
-dbp:nativeName	"Марія Назарівна Яремчук"
-dbo:background 	"solo_singer"@en.
-dbo:birthDate 	"1993-03-02"^^xsd:date.
-dbo:birthPlace  dbr:Ukraine
-                dbr:Chernivtsi
-dbo:genre   dbr:Pop_music
-dbo:wikiPageID 	"41049551"^^xsd:integer.
-dbo:wikiPageRevisionID "743897381"^^xsd:integer.
+_:a dbo:alias 	"Maria Yaremchuk"@en.
+_:a dbp:nativeName	"Марія Назарівна Яремчук".
+_:a dbo:background 	"solo_singer"@en.
 
-foaf:gender 	"female"@en.
-foaf:givenName	"María"@en,"Mariya Nazarivna Yaremchuk"@en.
-foaf:homepage   "http://mariyayaremchuk.com/"
+_:a dbo:birthDate 	"1993-03-02"^^xsd:date.
+_:a dbo:birthPlace  <http://dbpedia.org/resource/Ukraine>,
+                <http://dbpedia.org/resource/Chernivtsi>.
+_:a dbo:genre   <http://dbpedia.org/page/Pop_music>.
+_:a dbo:occupation <http://dbpedia.org/resource/Singer>.
+_:a dbo:wikiPageID 	"41049551"^^xsd:integer.
+_:a dbo:wikiPageRevisionID "743897381"^^xsd:integer.
 
-dct:description "Ukrainian pop singer who represented Ukraine in Eurovision 2014 "@en.
+_:a foaf:gender 	"female"@en.
+_:a foaf:givenName	"María"@en,"Mariya Nazarivna Yaremchuk"@en.
+_:a foaf:homepage   "http://mariyayaremchuk.com/".
+
+_:a dct:description "Ukrainian pop singer who represented Ukraine in Eurovision 2014 "@en.
+_:a rdf:type    <https://www.w3.org/2002/07/owl#Thing>,
+<http://xmlns.com/foaf/0.1/Person>,
+<http://dbpedia.org/ontology/Person>,
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Agent>,
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#NaturalPerson>,
+<http://www.wikidata.org/entity/Q215627>,
+<http://www.wikidata.org/entity/Q24229398>,
+<https://www.wikidata.org/wiki/Q483501>,
+<http://www.wikidata.org/entity/Q5>,
+<http://dbpedia.org/ontology/Agent>,
+<http://dbpedia.org/ontology/Artist>,
+<http://dbpedia.org/ontology/MusicalArtist>,
+<http://schema.org/MusicGroup>,
+<http://schema.org/Person>,
+<http://dbpedia.org/class/yago/WikicatPeopleFromChernivtsi>,
+<http://dbpedia.org/class/yago/WikicatUkrainianSingers>,
+<http://dbpedia.org/class/yago/Artist109812338>,
+<http://dbpedia.org/class/yago/CausalAgent100007347>,
+<http://dbpedia.org/class/yago/Creator109614315>,
+<http://dbpedia.org/class/yago/Entertainer109616922>,
+<http://dbpedia.org/class/yago/LivingThing100004258>,
+<http://dbpedia.org/class/yago/Musician110339966>,
+<http://dbpedia.org/class/yago/Musician110340312>,
+<http://dbpedia.org/class/yago/Object100002684>,
+<http://dbpedia.org/class/yago/Organism100004475>,
+<http://dbpedia.org/class/yago/Performer110415638>,
+<http://dbpedia.org/class/yago/Person100007846>,
+<http://dbpedia.org/class/yago/Singer110599806>,
+<http://dbpedia.org/class/yago/Whole100003553>,
+<http://dbpedia.org/class/yago/YagoLegalActor>,
+<http://dbpedia.org/class/yago/YagoLegalActorGeo>,
+<http://dbpedia.org/class/yago/WikicatLivingPeople>.
 
 
 
