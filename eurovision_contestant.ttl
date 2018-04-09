@@ -1,0 +1,26 @@
+@prefix dbr: <http://dbpedia.org/resource/>.
+@prefix dbo: <http://dbpedia.org/ontology/>.
+@prefix dbp: <http://dbpedia.org/property/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+@prefix foaf: <http://xmlns.com/foaf/0.1/>
+@prefix dct: <http://purl.org/dc/terms/>
+
+dbo:alias 	"Maria Yaremchuk"@en.
+dbp:nativeName	"Марія Назарівна Яремчук"
+dbo:background 	"solo_singer"@en.
+dbo:birthDate 	"1993-03-02"^^xsd:date.
+dbo:birthPlace  dbr:Ukraine
+                dbr:Chernivtsi
+dbo:genre   dbr:Pop_music
+dbo:wikiPageID 	"41049551"^^xsd:integer.
+dbo:wikiPageRevisionID "743897381"^^xsd:integer.
+
+foaf:gender 	"female"@en.
+foaf:givenName	"María"@en,"Mariya Nazarivna Yaremchuk"@en.
+foaf:homepage   "http://mariyayaremchuk.com/"
+
+dct:description "Ukrainian pop singer who represented Ukraine in Eurovision 2014 "@en.
+
+
+
+
