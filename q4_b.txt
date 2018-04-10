@@ -1,0 +1,16 @@
+PREFIX db: <http://dbpedia.org/>
+prefix dbr: <http://dbpedia.org/resource/>
+prefix dbo: <http://dbpedia.org/ontology/>
+prefix dbp: <http://dbpedia.org/property/>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix foaf: <http://xmlns.com/foaf/0.1/>
+prefix dct: <http://purl.org/dc/terms/>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+select ?name
+where{ 	
+  ?time dbo:artist dbr:Eurovision_Song_Contest; dbp:extra ?person_uri.
+  ?person_uri foaf:name ?name .
+}
+GROUP BY ?name
+HAVING (count(?time)>1)
