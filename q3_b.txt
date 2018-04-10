@@ -8,7 +8,7 @@ prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 select ?name ?bday ?bplace
 WHERE {
-    ?x dbo:alias ?name .
+    ?x foaf:name ?name .
     ?x dbo:birthDate ?bday .
     ?y dbo:Place ?bplace .
 

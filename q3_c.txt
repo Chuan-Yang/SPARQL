@@ -8,7 +8,7 @@ prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 select ?name ?type
 WHERE {
-    ?x dbo:alias ?name .
+    ?x foaf:name ?name .
     ?x rdf:type ?type .
 
     FILTER regex(str(?type), "class", "i" ) 
