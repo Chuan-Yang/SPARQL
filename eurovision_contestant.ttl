@@ -11,8 +11,9 @@ _:a dbp:nativeName	"Марія Назарівна Яремчук".
 _:a dbo:background 	"solo_singer"@en.
 
 _:a dbo:birthDate 	"1993-03-02"^^xsd:date.
-_:a dbo:birthPlace  <http://dbpedia.org/resource/Ukraine>,
-                <http://dbpedia.org/resource/Chernivtsi>.
+_:a dbo:birthPlace  _:b.
+_:b dbo:Place <http://dbpedia.org/resource/Ukraine>,
+            <http://dbpedia.org/resource/Chernivtsi>.
 _:a dbo:genre   <http://dbpedia.org/page/Pop_music>.
 _:a dbo:occupation <http://dbpedia.org/resource/Singer>.
 _:a dbo:wikiPageID 	"41049551"^^xsd:integer.
