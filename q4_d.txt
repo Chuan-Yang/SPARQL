@@ -9,7 +9,7 @@ prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
 select distinct ?name
 where{ 	
-  {?x dbo:artist dbr:Eurovision_Song_Contest; dbp:extra ?person_uri.
+   ?x dbo:artist dbr:Eurovision_Song_Contest; dbp:extra ?person_uri.
    ?x dbp:year ?con_year .
    ?person_uri foaf:name ?name .
   	?person_uri dbo:birthDate ?date .
@@ -20,19 +20,4 @@ where{
   bind( xsd:integer(substr( str(?con_year), 1, 4)) as ?cy ).
    FILTER regex (str(?c_uri), "Russia", "i").
 	FILTER (?y + 22 <= ?cy && ?y + 44 > ?cy).
-  }
-  union
-  {?x dbo:artist dbr:Eurovision_Song_Contest; dbp:extra ?band_uri.
-   ?x dbp:year ?con_year .
-   ?band_uri dbo:bandMember ?bmember.
-   ?bmember foaf:name ?name .
-   ?bmember dbo:birthDate ?date.
-   ?bmember dbo:birthPlace ?city .
-   ?city dbo:country ?c_uri .
-    
-    bind( xsd:integer(substr( str(?date), 1, 4)) as ?y ).
-   bind( xsd:integer(substr( str(?con_year), 1, 4)) as ?cy ).
-   FILTER regex (str(?c_uri), "Russia", "i").
-	FILTER (?y + 22 <= ?cy && ?y + 44 > ?cy).
-  }
 }
