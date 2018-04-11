@@ -1,4 +1,5 @@
 PREFIX db: <http://dbpedia.org/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 prefix dbr: <http://dbpedia.org/resource/>
 prefix dbo: <http://dbpedia.org/ontology/>
 prefix dbp: <http://dbpedia.org/property/>
@@ -7,11 +8,11 @@ prefix foaf: <http://xmlns.com/foaf/0.1/>
 prefix dct: <http://purl.org/dc/terms/>
 prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
-select distinct ?name
+select distinct str(?name)
 where{ 	
    ?x dbo:artist dbr:Eurovision_Song_Contest; dbp:extra ?person_uri.
    ?x dbp:year ?con_year .
-   ?person_uri foaf:name ?name .
+   ?person_uri rdfs:label ?name .
   	?person_uri dbo:birthDate ?date .
    ?person_uri dbo:birthPlace ?city .
    ?city dbo:country ?c_uri .
@@ -20,4 +21,5 @@ where{
   bind( xsd:integer(substr( str(?con_year), 1, 4)) as ?cy ).
    FILTER regex (str(?c_uri), "Russia", "i").
 	FILTER (?y + 22 <= ?cy && ?y + 44 > ?cy).
+   FILTER ( lang(?name) = "en" ).
 }
